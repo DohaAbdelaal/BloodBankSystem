@@ -1,0 +1,16 @@
+/* Custom styles for the form */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-check-label {
+    margin-right: 15px;
+}
+.btn-submit {
+    background-color: #ffc0cb; /* Light rose color */
+    border-color: #ffc0cb; /* Light rose color */
+    color: #fff; /* White text color */
+}
+.btn-submit:hover {
+    background-color: #ffa7b9; /* Lighter shade of rose on hover */
+    border-color: #ffa7b9; /* Lighter shade of rose on hover */
+}

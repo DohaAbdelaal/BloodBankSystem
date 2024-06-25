@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Result</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/process_donation.css' %}">
+    <style>
+        .custom-form {
+            background-color: #f5e3e6; /* Light rose background color */
+            padding: 20px;
+            border-radius: 10px;
+            
+        }
+        .form-title {
+            text-align: left;
+        }
+        .radio-inline{
+            
+            margin-right: 20px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container result-container">
+        <div class="result-header">
+            <h1 class="mb-4">Donation Result</h1>
+            <h3>Thank you for your request</h3>
+        </div>
+        {% if donation_status == 'accepted' %}
+            <div class="result-message text-success">
+                <p>Congratulations! Your donation is accepted.</p>
+            </div>  
+            <h5 class="form-title" >  Please, fill in the following form</h5>
+
+
+                <form method="post"  action="{% url 'process_donation' %}" class="custom-form" >
+                    {% csrf_token %}
+                    <div class="form-group" class="radio-inline">
+                        <div  class="radio-inline">
+                        <label for="Blood_group">Blood Group or Type:</label><br>
+                        <input type="radio" id="group_o" name="Blood_group" value="O" required>
+                        <label for="group_o">O</label>
+                        <input type="radio" id="group_a" name="Blood_group" value="A" required>
+                        <label for="group_a">A</label>
+                        <input type="radio" id="group_b" name="Blood_group" value="B" required>
+                        <label for="group_b">B</label>
+                        <input type="radio" id="group_ab" name="Blood_group" value="AB" required>
+                        <label for="group_ab">AB</label>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Bloodbankcity">Blood Bank City:</label>
+                        <select class="form-control" id="blood_bank_city" name="Bloodbankcity" required>
+                            <option value="cairo">Cairo</option>
+                            <option value="alexandria">Alexandria</option>
+                            <option value="giza">Giza</option>
+                            <option value="sharmelsheikh">Sharm El Sheikh</option>
+                            <option value="luxor">Luxor</option>
+                            <option value="aswan">Aswan</option>
+                            <option value="damietta">Damietta</option>
+                            <option value="port said">Port Said</option>
+                            <option value="suez">Suez</option>
+                            <option value="ismailia">Ismailia</option>
+                            <option value="al minya">Al Minya</option>
+                            <option value="beni suef">Beni Suef</option>
+                            <option value="sohag">Sohag</option>
+                            <option value="qena">Qena</option>
+                            <option value="assuit">Assiut</option>
+                            <option value="fayoum">Fayoum</option>
+                            <option value="marsa matrouh">Marsa Matrouh</option>
+                            <option value="kafr el sheikh">Kafr El Sheikh</option>
+                            <option value="dakahlia">Dakahlia</option>
+                            <option value="qalyubia">Qalyubia</option>
+                            <option value="menoufia">Menoufia</option>
+                            <option value="beheira">Beheira</option>
+                            <option value="gharbia">Gharbia</option>
+                            <option value="kafr el zayat">Kafr El Zayat</option>
+                            <option value="new valley">New Valley</option>
+                            <option value="red sea">Red Sea</option>
+                            <option value="north sinai">North Sinai</option>
+                            <option value="south sinai">South Sinai</option>
+                            <option value="matrouh">Matrouh</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Blood_expiration_date">Blood Expiration Date:</label>
+                        <input type="date" id="blood_expiration_date" name="Blood_expiration_date" required>
+                    </div>
+                <br>
+                 <button type="submit" class="btn btn-primary">Submit</button> 
+                </form>
+           <!--<br><a href="{% url 'Home' %}" class="btn btn-primary">Submit</a>--> 
+           
+        {% else %}
+            <div class="result-message text-danger">
+                <p>Unfortunately, your request is rejected.</p>
+                <p>An email will be sent to you with more details.</p>
+            </div>
+            <br><a href="{% url 'Home' %}" class="btn btn-primary">Back to Home</a>
+        {% endif %}
+        
+    </div>
+    
+</body>
+</html>

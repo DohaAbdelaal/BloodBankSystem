@@ -1,0 +1,46 @@
+{% load static%}
+<html>
+<head>
+ <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+ <link rel="stylesheet" href="{%static 'css/style.css'%}">
+ <link rel="stylesheet" href="{%static 'css/all.css'%}">
+ <link rel="stylesheet" href="{%static 'css/donor.css'%}">
+ <link rel="stylesheet" href="{% static 'css/request.css' %}">
+ <link rel="stylesheet" href="{% static 'css/faq.css' %}">
+
+ <title>Blood Bank</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg text-light bg-dark position-fixed w-100 d-flex justify-content-center">
+        <div class="nav-container d-flex align-items-center">
+    
+        <a class="navbar-brand " href="#"> <img src="{% static 'images/LOGO.png' %}" ></a> <b><h5>Blood Bank</h5></b>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    
+          <div class="navbar-nav ml-auto text-light d-flex align-items-lg-center">
+            <a class="nav-link active" href="{% url 'Home' %}">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'donor' %}">Donation</a>
+            <a class="nav-link" href="{% url 'blood_request' %}">Blood request</a>
+            <a class="nav-link" href="{% url 'FAQ' %}">FAQ</a>
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+            <div class="my-icons">
+                
+           <a  href="#"> <i class="fab fa-twitter"></i></a>
+           <a  href="#"><i class="fab fa-facebook-f"></i></a>
+           <a  href="#"><i class="fab fa-instagram"></i></a>
+           </div>
+          </div>
+        </div>
+    </div>
+      </nav>
+      
+      {% block content %}{% endblock %}
+
+      <script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>      

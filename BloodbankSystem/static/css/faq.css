@@ -1,0 +1,13 @@
+.question {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.answer {
+    margin-bottom: 20px;
+}
+.faq-item {
+    background-color: #ffebf0; /* Set FAQ item background color to light rose */
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}

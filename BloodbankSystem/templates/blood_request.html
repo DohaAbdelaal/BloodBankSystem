@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container"style="padding-top: 200px;">
+        <h3 >Hospital Request Form</h3>
+        <form method="post">
+            {% csrf_token %}
+            <!-- Hospital Name input -->
+            <div class="form-group">
+                <label for="hospitalName">Hospital Name:</label>
+                <input type="text" class="form-control" id="hospitalName" name="hospitalName" placeholder="Enter hospital name">
+            </div>
+            <!-- Blood group or type radio buttons -->
+            <div class="form-group">
+                <label for="bloodGroup">Blood Group or Type:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="bloodGroup" id="bloodGroupO" value="O">
+                    <label class="form-check-label" for="bloodGroupO">O</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="bloodGroup" id="bloodGroupA" value="A">
+                    <label class="form-check-label" for="bloodGroupA">A</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="bloodGroup" id="bloodGroupB" value="B">
+                    <label class="form-check-label" for="bloodGroupB">B</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="bloodGroup" id="bloodGroupAB" value="AB">
+                    <label class="form-check-label" for="bloodGroupAB">AB</label>
+                </div>
+            </div>
+            <!-- Location (City) drop-down list -->
+            <div class="form-group">
+                <label for="city">City:</label>
+                <select class="form-control" id="city" name="city">
+                    <option value="cairo">Cairo</option>
+                    <option value="alexandria">Alexandria</option>
+                    <option value="giza">Giza</option>
+                    <option value="sharmelsheikh">Sharm El Sheikh</option>
+                    <option value="luxor">Luxor</option>
+                    <option value="aswan">Aswan</option>
+                    <option value="damietta">Damietta</option>
+                    <option value="port said">Port Said</option>
+                    <option value="suez">Suez</option>
+                    <option value="ismailia">Ismailia</option>
+                    <option value="al minya">Al Minya</option>
+                    <option value="beni suef">Beni Suef</option>
+                    <option value="sohag">Sohag</option>
+                    <option value="qena">Qena</option>
+                    <option value="assuit">Assiut</option>
+                    <option value="fayoum">Fayoum</option>
+                    <option value="marsa matrouh">Marsa Matrouh</option>
+                    <option value="kafr el sheikh">Kafr El Sheikh</option>
+                    <option value="dakahlia">Dakahlia</option>
+                    <option value="qalyubia">Qalyubia</option>
+                    <option value="menoufia">Menoufia</option>
+                    <option value="beheira">Beheira</option>
+                    <option value="gharbia">Gharbia</option>
+                    <option value="kafr el zayat">Kafr El Zayat</option>
+                    <option value="new valley">New Valley</option>
+                    <option value="red sea">Red Sea</option>
+                    <option value="north sinai">North Sinai</option>
+                    <option value="south sinai">South Sinai</option>
+                    <option value="matrouh">Matrouh</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <!-- Patients' status radio buttons -->
+            <div class="form-group">
+                <label>Patient Status:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="patientStatus" id="patientStatusImmediate" value="Immediate">
+                    <label class="form-check-label" for="patientStatusImmediate">Immediate</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="patientStatus" id="patientStatusUrgent" value="Urgent">
+                    <label class="form-check-label" for="patientStatusUrgent">Urgent</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="patientStatus" id="patientStatusNormal" value="Normal">
+                    <label class="form-check-label" for="patientStatusNormal">Normal</label>
+                </div>
+            </div>
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-submit">Submit</button>
+        </form>
+    </div>
+    {% endblock %}
+

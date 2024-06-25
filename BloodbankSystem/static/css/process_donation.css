@@ -1,0 +1,47 @@
+ body {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+        }
+.result-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.result-header {
+    margin-bottom: 30px;
+}
+.result-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.btn {
+    padding: 10px 30px;
+    font-size: 18px;
+}
+.custom-form {
+    background-color: #f5e3e6; /* Light rose background color */
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.form-title {
+    text-align: left;
+}
+.radio-inline label {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.custom-form {
+    background-color: #f5e3e6; /* Light rose background color */
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.form-title {
+    text-align: left;
+}

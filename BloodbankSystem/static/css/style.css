@@ -1,0 +1,245 @@
+
+.active
+{
+    color: #f25454;
+}
+nav a{
+
+    color:white;
+    font-weight: 500;
+}
+nav a:hover
+{
+    color:#f25454;
+}
+nav
+{
+   
+   border-bottom: solid 0.1px #666666;
+    height:90px;
+    z-index: 1000000;
+
+    
+}
+nav i{
+    color: white;
+    font-weight: 500;
+   padding:0px 10px;
+}
+nav i:hover{
+    color:#f25454;
+}
+.nav-container
+{
+    width: 80%;
+    
+}
+.my-icons
+{
+    bottom:0px;
+    padding-left: 40px;
+}
+
+.carousel-control-prev ,.carousel-control-next
+{
+    position: absolute;
+    left:0;
+    z-index:3;
+   height:52px;
+   width: 49px;
+    top:30vh;
+    border: solid white 2px;
+    font-weight: 100;
+    color:white
+    
+}
+
+.carousel-control-next
+{
+    top:37vh
+}
+
+.carousel h1 
+{
+    font-size: 70px;
+    font-weight: 900;
+    color:white;
+}
+.settings
+{
+    position: fixed;
+    left:0;
+    top:150;
+    color:white;
+    width:39px;
+    height:39px;
+    background-color:#1f2528;
+    text-align: center;
+    z-index:10000
+
+}
+.settings a
+{
+    color:white;
+}
+
+.about
+{
+    position: relative;
+    margin-top: 80px;
+
+   
+}
+.about h3
+{
+    position: absolute;
+    font-size: 2rem;
+    bottom: 0;
+}
+.about h1
+{
+    color: #f1f1f1;
+    font-size: 5rem;
+    border-bottom: solid black  1px;
+    
+}
+
+.description{
+    color: #999999;
+    font-size: 18px;
+}
+.left-one
+{
+    color: #666666;
+    font-size: 14px;
+}
+
+.bar{
+    color:#f25454;
+}
+.first
+{
+    width: 80%;
+}
+.second
+{
+    width: 95%;
+}
+.second
+{
+    width: 85%;
+}
+.second
+{
+    width: 70%;
+}
+.num{
+    color: #666666;
+}
+.layer:hover
+{
+    background-color:rgba(242,84,84,0.85) ;
+    color: white;
+     
+}
+
+.member
+{
+    width: 25%;
+    height: 400px;
+    
+
+}
+
+
+.images
+{
+   width: 75%;
+   margin:20px;
+}
+
+.member1
+{
+    background-image: url("images/member-1.jpg");
+    background-size:cover ;
+    
+    
+}
+
+.member2
+{
+    background-image: url("images/member-2.jpg");
+    background-size:cover ;
+}
+.member3
+{
+    background-image: url("images/member-3.jpg");
+    background-size:cover ;
+}
+.member4
+{
+    background-image: url("images/member-4.jpg");
+    background-size:cover ;
+}
+button
+{
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #f25454;
+    border: transparent;
+    width: 100px;
+
+}
+.question
+{
+    width: 60%;
+    right: 100px;
+    
+
+}
+.question-conatiner
+{
+    margin:100px;
+    
+    
+}
+.symbol
+{
+    color:#f25454;
+    font-size: 25px;
+    
+}
+.new-section{
+    height:150px;
+    width:350px;
+    
+
+}
+.divs-container
+{
+    margin-top: 40px;
+    width:80%;
+    flex-wrap: wrap;
+    
+}
+.divs-container h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+.divs-container p{
+    font-size: 14px;
+    padding-top: 10px;
+    color:#666666;
+}
+.content 
+{
+    box-sizing: border-box;
+}
+.myphoto
+{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+
+}
